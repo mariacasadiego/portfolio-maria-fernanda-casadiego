@@ -72,7 +72,7 @@ src/
 Clona el repositorio:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone portfolio-maria-fernanda-casadiego
 ```
 
 Entra al proyecto:
