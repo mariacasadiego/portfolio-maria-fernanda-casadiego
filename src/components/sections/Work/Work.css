@@ -1,0 +1,59 @@
+.work {
+  padding: 96px 0;
+}
+
+.work__header {
+  display: grid;
+  gap: 32px;
+
+  margin-bottom: 56px;
+}
+
+.work__eyebrow {
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.work__header h2 {
+  max-width: 576px;
+
+  margin: 16px 0 0;
+
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.work__header > p {
+  max-width: 512px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.75;
+}
+
+.work__projects {
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .work {
+    padding: 128px 0;
+  }
+
+  .work__header {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .work__header > p {
+    justify-self: end;
+  }
+}

@@ -1,0 +1,752 @@
+/* ========================================================
+   ANIMATED BACKGROUND
+======================================================== */
+
+.animated-bg {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  background:
+    linear-gradient(rgba(125, 31, 54, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 31, 54, 0.018) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+}
+
+/* ========================================================
+     BLOBS ORGÁNICOS
+  ======================================================== */
+
+.animated-bg__blob {
+  position: absolute;
+
+  filter: blur(75px);
+
+  opacity: 0.22;
+
+  will-change: transform, border-radius;
+}
+
+/* superior izquierda */
+
+.animated-bg__blob--one {
+  top: -180px;
+  left: -180px;
+
+  width: 520px;
+  height: 520px;
+
+  background: #eca2b6;
+
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+
+  animation:
+    blobMoveOne 18s ease-in-out infinite alternate,
+    blobShape 10s ease-in-out infinite alternate;
+}
+
+/* derecha */
+
+.animated-bg__blob--two {
+  top: 25%;
+  right: -180px;
+
+  width: 480px;
+  height: 480px;
+
+  background: #7d1f36;
+
+  opacity: 0.09;
+
+  border-radius: 40% 60% 45% 55% / 60% 40% 60% 40%;
+
+  animation:
+    blobMoveTwo 22s ease-in-out infinite alternate,
+    blobShape 13s ease-in-out infinite alternate-reverse;
+}
+
+/* inferior */
+
+.animated-bg__blob--three {
+  left: 30%;
+  bottom: -250px;
+
+  width: 560px;
+  height: 560px;
+
+  background: #f2b6c5;
+
+  opacity: 0.16;
+
+  border-radius: 55% 45% 65% 35% / 45% 65% 35% 55%;
+
+  animation:
+    blobMoveThree 25s ease-in-out infinite alternate,
+    blobShape 15s ease-in-out infinite alternate;
+}
+
+/* ========================================================
+     ORBITS / CURVED LINES
+  ======================================================== */
+
+.animated-bg__orbit {
+  position: absolute;
+
+  border: 1px solid rgba(125, 31, 54, 0.12);
+
+  border-radius: 50%;
+
+  will-change: transform;
+}
+
+.animated-bg__orbit--one {
+  top: 12%;
+  right: -220px;
+
+  width: 600px;
+  height: 260px;
+
+  transform: rotate(-22deg);
+
+  animation: orbitOne 18s ease-in-out infinite alternate;
+}
+
+.animated-bg__orbit--two {
+  bottom: 8%;
+  left: -200px;
+
+  width: 520px;
+  height: 220px;
+
+  border-color: rgba(236, 162, 182, 0.3);
+
+  transform: rotate(20deg);
+
+  animation: orbitTwo 21s ease-in-out infinite alternate;
+}
+
+/* ========================================================
+     PILLS
+  ======================================================== */
+
+.animated-bg__pill {
+  position: absolute;
+
+  border-radius: 999px;
+
+  will-change: transform;
+}
+
+.animated-bg__pill--one {
+  top: 32%;
+  left: 5%;
+
+  width: 110px;
+  height: 36px;
+
+  background: rgba(236, 162, 182, 0.16);
+
+  transform: rotate(-25deg);
+
+  animation: pillFloatOne 10s ease-in-out infinite;
+}
+
+.animated-bg__pill--two {
+  right: 8%;
+  bottom: 18%;
+
+  width: 80px;
+  height: 26px;
+
+  border: 1px solid rgba(125, 31, 54, 0.18);
+
+  transform: rotate(35deg);
+
+  animation: pillFloatTwo 12s ease-in-out infinite;
+}
+
+/* ========================================================
+     SQUARES
+  ======================================================== */
+
+.animated-bg__square {
+  position: absolute;
+
+  border-radius: 8px;
+
+  will-change: transform;
+}
+
+.animated-bg__square--one {
+  top: 18%;
+  left: 65%;
+
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid rgba(125, 31, 54, 0.18);
+
+  animation: squareRotate 16s linear infinite;
+}
+
+.animated-bg__square--two {
+  left: 20%;
+  bottom: 14%;
+
+  width: 18px;
+  height: 18px;
+
+  background: rgba(236, 162, 182, 0.22);
+
+  animation:
+    squareRotate 12s linear infinite reverse,
+    littleFloat 7s ease-in-out infinite;
+}
+
+/* ========================================================
+     CODE ELEMENTS
+  ======================================================== */
+
+.animated-bg__code {
+  position: absolute;
+
+  color: #7d1f36;
+
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  font-weight: 500;
+
+  letter-spacing: -0.08em;
+
+  opacity: 0.12;
+
+  user-select: none;
+
+  will-change: transform;
+}
+
+.animated-bg__code--one {
+  top: 24%;
+  right: 13%;
+
+  font-size: 1.4rem;
+
+  animation: codeFloatOne 9s ease-in-out infinite;
+}
+
+.animated-bg__code--two {
+  top: 62%;
+  left: 8%;
+
+  font-size: 1.2rem;
+
+  animation: codeFloatTwo 11s ease-in-out infinite;
+}
+
+.animated-bg__code--three {
+  right: 30%;
+  bottom: 9%;
+
+  font-size: 1rem;
+
+  animation: codeFloatOne 13s ease-in-out infinite reverse;
+}
+
+/* ========================================================
+     SPARKS
+  ======================================================== */
+
+.animated-bg__spark {
+  position: absolute;
+
+  color: #d77992;
+
+  opacity: 0.35;
+
+  user-select: none;
+
+  will-change: transform;
+}
+
+.animated-bg__spark--one {
+  top: 15%;
+  left: 42%;
+
+  font-size: 1.5rem;
+
+  animation:
+    sparkRotate 12s linear infinite,
+    littleFloat 6s ease-in-out infinite;
+}
+
+.animated-bg__spark--two {
+  top: 55%;
+  right: 7%;
+
+  font-size: 2rem;
+
+  animation:
+    sparkRotate 18s linear infinite reverse,
+    littleFloat 8s ease-in-out infinite;
+}
+
+.animated-bg__spark--three {
+  left: 38%;
+  bottom: 18%;
+
+  font-size: 1.7rem;
+
+  animation: sparkPulse 5s ease-in-out infinite;
+}
+
+/* ========================================================
+     DOTS
+  ======================================================== */
+
+.animated-bg__dot {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  background: #eca2b6;
+
+  border-radius: 50%;
+
+  opacity: 0.55;
+
+  will-change: transform;
+}
+
+.animated-bg__dot--one {
+  top: 43%;
+  left: 23%;
+
+  animation: dotTravelOne 13s ease-in-out infinite alternate;
+}
+
+.animated-bg__dot--two {
+  top: 72%;
+  right: 20%;
+
+  width: 5px;
+  height: 5px;
+
+  background: #7d1f36;
+
+  animation: dotTravelTwo 16s ease-in-out infinite alternate;
+}
+
+.animated-bg__dot--three {
+  top: 10%;
+  right: 35%;
+
+  width: 4px;
+  height: 4px;
+
+  animation: dotTravelThree 10s ease-in-out infinite alternate;
+}
+
+/* ========================================================
+     TRAVELING LINE
+  ======================================================== */
+
+.animated-bg__traveler {
+  position: absolute;
+
+  top: 0;
+  left: -250px;
+
+  width: 220px;
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, rgba(236, 162, 182, 0.55), transparent);
+
+  opacity: 0.5;
+
+  animation: travelerMove 14s linear infinite;
+}
+
+/* ========================================================
+     DARK MODE
+  ======================================================== */
+
+[data-theme="dark"] .animated-bg {
+  background:
+    linear-gradient(rgba(255, 180, 200, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 180, 200, 0.018) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+}
+
+[data-theme="dark"] .animated-bg__blob--one {
+  background: #7d1f36;
+
+  opacity: 0.25;
+}
+
+[data-theme="dark"] .animated-bg__blob--two {
+  background: #ff9fba;
+
+  opacity: 0.08;
+}
+
+[data-theme="dark"] .animated-bg__blob--three {
+  background: #6e2132;
+
+  opacity: 0.18;
+}
+
+[data-theme="dark"] .animated-bg__orbit {
+  border-color: rgba(255, 180, 200, 0.15);
+}
+
+[data-theme="dark"] .animated-bg__pill--one {
+  background: rgba(255, 180, 200, 0.12);
+}
+
+[data-theme="dark"] .animated-bg__pill--two {
+  border-color: rgba(255, 180, 200, 0.2);
+}
+
+[data-theme="dark"] .animated-bg__square--one {
+  border-color: rgba(255, 180, 200, 0.2);
+}
+
+[data-theme="dark"] .animated-bg__square--two {
+  background: rgba(255, 180, 200, 0.18);
+}
+
+[data-theme="dark"] .animated-bg__code {
+  color: #ffb4c8;
+
+  opacity: 0.13;
+}
+
+[data-theme="dark"] .animated-bg__spark {
+  color: #ffb4c8;
+}
+
+[data-theme="dark"] .animated-bg__dot {
+  background: #ffb4c8;
+}
+
+/* ========================================================
+     BLOB ANIMATIONS
+  ======================================================== */
+
+@keyframes blobMoveOne {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translate3d(160px, 100px, 0) rotate(15deg) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(80px, 220px, 0) rotate(-10deg) scale(0.92);
+  }
+}
+
+@keyframes blobMoveTwo {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-150px, 120px, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(-70px, -100px, 0) scale(0.95);
+  }
+}
+
+@keyframes blobMoveThree {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(160px, -130px, 0) scale(1.08);
+  }
+
+  100% {
+    transform: translate3d(-120px, -60px, 0) scale(0.9);
+  }
+}
+
+@keyframes blobShape {
+  0% {
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+  }
+
+  50% {
+    border-radius: 35% 65% 40% 60% / 60% 35% 65% 40%;
+  }
+
+  100% {
+    border-radius: 50% 50% 30% 70% / 35% 60% 40% 65%;
+  }
+}
+
+/* ========================================================
+     ORBIT ANIMATIONS
+  ======================================================== */
+
+@keyframes orbitOne {
+  0% {
+    transform: translateX(0) rotate(-22deg);
+  }
+
+  100% {
+    transform: translateX(-120px) translateY(50px) rotate(-12deg);
+  }
+}
+
+@keyframes orbitTwo {
+  0% {
+    transform: translateX(0) rotate(20deg);
+  }
+
+  100% {
+    transform: translateX(130px) translateY(-70px) rotate(30deg);
+  }
+}
+
+/* ========================================================
+     PILLS
+  ======================================================== */
+
+@keyframes pillFloatOne {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-25deg);
+  }
+
+  50% {
+    transform: translate(40px, -35px) rotate(-12deg);
+  }
+}
+
+@keyframes pillFloatTwo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(35deg);
+  }
+
+  50% {
+    transform: translate(-35px, -45px) rotate(20deg);
+  }
+}
+
+/* ========================================================
+     SMALL ELEMENTS
+  ======================================================== */
+
+@keyframes squareRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes littleFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -25px;
+  }
+}
+
+@keyframes codeFloatOne {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-25px, -30px) rotate(-6deg);
+  }
+}
+
+@keyframes codeFloatTwo {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(35px, -25px) rotate(8deg);
+  }
+}
+
+@keyframes sparkRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sparkPulse {
+  0%,
+  100% {
+    transform: scale(0.8);
+
+    opacity: 0.15;
+  }
+
+  50% {
+    transform: scale(1.3);
+
+    opacity: 0.5;
+  }
+}
+
+@keyframes dotTravelOne {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(80px, -70px);
+  }
+}
+
+@keyframes dotTravelTwo {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-90px, -60px);
+  }
+}
+
+@keyframes dotTravelThree {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(45px, 80px);
+  }
+}
+
+/* ========================================================
+     TRAVELER
+  ======================================================== */
+
+@keyframes travelerMove {
+  0% {
+    left: -250px;
+    top: 18%;
+  }
+
+  45% {
+    left: 100%;
+    top: 18%;
+  }
+
+  46% {
+    left: 100%;
+    top: 74%;
+  }
+
+  50% {
+    left: -250px;
+    top: 74%;
+  }
+
+  95% {
+    left: 100%;
+    top: 74%;
+  }
+
+  100% {
+    left: 100%;
+    top: 74%;
+  }
+}
+
+/* ========================================================
+     MOBILE
+  ======================================================== */
+
+@media (max-width: 767px) {
+  .animated-bg {
+    background-size: 50px 50px;
+  }
+
+  .animated-bg__blob--one {
+    width: 360px;
+    height: 360px;
+  }
+
+  .animated-bg__blob--two {
+    width: 320px;
+    height: 320px;
+  }
+
+  .animated-bg__blob--three {
+    width: 380px;
+    height: 380px;
+  }
+
+  .animated-bg__orbit--one {
+    width: 400px;
+    height: 180px;
+  }
+
+  .animated-bg__orbit--two {
+    width: 360px;
+    height: 150px;
+  }
+
+  .animated-bg__code {
+    font-size: 0.9rem;
+  }
+
+  .animated-bg__code--three,
+  .animated-bg__square--two,
+  .animated-bg__spark--three {
+    display: none;
+  }
+}
+
+/* ========================================================
+     REDUCED MOTION
+  ======================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-bg__blob,
+  .animated-bg__orbit,
+  .animated-bg__pill,
+  .animated-bg__square,
+  .animated-bg__code,
+  .animated-bg__spark,
+  .animated-bg__dot,
+  .animated-bg__traveler {
+    animation: none;
+  }
+}

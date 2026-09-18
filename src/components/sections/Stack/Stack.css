@@ -1,0 +1,165 @@
+.stack {
+  padding: 96px 0;
+}
+
+.stack__header {
+  display: grid;
+  gap: 32px;
+
+  margin-bottom: 64px;
+}
+
+.stack__eyebrow {
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.stack__header h2 {
+  max-width: 620px;
+
+  margin: 16px 0 0;
+
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.stack__header > p {
+  max-width: 512px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  line-height: 1.75;
+}
+
+.stack__grid {
+  display: grid;
+
+  border-top: 1px solid var(--border);
+}
+
+.stack__group {
+  height: 100%;
+
+  padding: 40px 0;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.stack__number {
+  color: var(--primary);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.stack__group h3 {
+  margin: 20px 0 0;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.stack__description {
+  min-height: 56px;
+
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.stack__skills {
+  margin-top: 32px;
+}
+
+.stack__skill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 0;
+
+  border-top: 1px solid var(--border);
+
+  font-size: 0.875rem;
+}
+
+.stack__skill span {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.stack__skill svg {
+  color: var(--muted);
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.stack__skill:hover span {
+  color: var(--primary);
+
+  transform: translateX(4px);
+}
+
+.stack__skill:hover svg {
+  color: var(--accent);
+
+  opacity: 1;
+
+  transform: translate(2px, -2px);
+}
+
+@media (min-width: 768px) {
+  .stack {
+    padding: 128px 0;
+  }
+
+  .stack__header {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .stack__header > p {
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stack__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stack__group {
+    padding: 40px 32px;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+  }
+
+  .stack__grid > div:first-child .stack__group {
+    padding-left: 0;
+  }
+
+  .stack__grid > div:last-child .stack__group {
+    padding-right: 0;
+
+    border-right: 0;
+  }
+}

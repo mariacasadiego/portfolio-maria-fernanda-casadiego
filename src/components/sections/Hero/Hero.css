@@ -1,0 +1,414 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+     GRID
+  ========================= */
+
+.hero__grid {
+  display: grid;
+
+  gap: 48px;
+
+  padding: 80px 0;
+}
+
+/* =========================
+     EYEBROW
+  ========================= */
+
+.hero__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.hero__eyebrow p {
+  margin: 0;
+
+  color: var(--primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.18em;
+}
+
+.hero__eyebrow-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  background: var(--accent);
+
+  border-radius: 50%;
+}
+
+/* =========================
+     TITLE
+  ========================= */
+
+.hero__title {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-size: clamp(3.5rem, 7vw, 6.8rem);
+
+  font-weight: 600;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.065em;
+}
+
+.hero__highlight {
+  position: relative;
+
+  display: inline-block;
+
+  z-index: 1;
+}
+
+.hero__highlight-line {
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  z-index: -1;
+
+  width: 100%;
+  height: 12px;
+
+  background: var(--accent);
+
+  border-radius: 999px;
+
+  opacity: 0.6;
+}
+
+.hero__title-secondary {
+  display: block;
+
+  color: var(--muted);
+
+  font-weight: 400;
+}
+
+/* =========================
+     CONTENT
+  ========================= */
+
+.hero__content {
+  max-width: 448px;
+}
+
+.hero__description {
+  margin: 0 0 32px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+/* =========================
+     ACTIONS
+  ========================= */
+
+.hero__actions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+/* =========================
+     BUTTON BASE
+  ========================= */
+
+.hero__button {
+  min-height: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  font-size: 0.875rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================
+     PRIMARY BUTTON
+  ========================= */
+
+.hero__button--primary {
+  color: #ffffff;
+
+  background: var(--primary);
+
+  border: 1px solid var(--primary);
+}
+
+.hero__button--primary:hover {
+  color: #ffffff;
+
+  background: var(--primary-hover);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 30px rgba(110, 33, 50, 0.18);
+}
+
+/* =========================
+     PRIMARY BUTTON ICON
+  ========================= */
+
+.hero__button-icon {
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #6e2132;
+
+  background: #eca2b6;
+
+  border-radius: 50%;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/*
+    IMPORTANTE:
+    Fuerza al SVG de lucide a utilizar
+    el color definido en el círculo.
+  */
+
+.hero__button-icon svg {
+  display: block;
+
+  width: 15px;
+  height: 15px;
+
+  color: inherit;
+
+  stroke: currentColor;
+
+  stroke-width: 2.2;
+}
+
+/* movimiento de la flecha */
+
+.hero__button--primary:hover .hero__button-icon {
+  transform: translateY(3px);
+
+  background: #f3b4c4;
+}
+
+/* =========================
+     SECONDARY BUTTON
+  ========================= */
+
+.hero__button--secondary {
+  color: var(--foreground);
+
+  background: transparent;
+
+  border: 1px solid var(--border);
+}
+
+.hero__button--secondary:hover {
+  color: var(--primary);
+
+  background: var(--surface);
+
+  border-color: var(--accent);
+
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+     DARK MODE
+  ======================================================== */
+
+/* EYEBROW */
+
+[data-theme="dark"] .hero__eyebrow p {
+  color: #ffb4c8;
+}
+
+[data-theme="dark"] .hero__eyebrow-dot {
+  background: #ffb4c8;
+}
+
+/* HIGHLIGHT */
+
+[data-theme="dark"] .hero__highlight-line {
+  background: #ffb4c8;
+
+  opacity: 0.7;
+}
+
+/* =========================
+     DARK PRIMARY BUTTON
+  ========================= */
+
+[data-theme="dark"] .hero__button--primary {
+  color: #ffffff;
+
+  background: #7d1f36;
+
+  border-color: #7d1f36;
+}
+
+[data-theme="dark"] .hero__button--primary:hover {
+  color: #ffffff;
+
+  background: #912844;
+
+  border-color: #912844;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================
+     DARK BUTTON ICON
+  ========================= */
+
+[data-theme="dark"] .hero__button-icon {
+  color: #351820;
+
+  background: #ffb4c8;
+}
+
+[data-theme="dark"] .hero__button-icon svg {
+  color: #351820;
+
+  stroke: #351820;
+}
+
+[data-theme="dark"] .hero__button--primary:hover .hero__button-icon {
+  color: #351820;
+
+  background: #ffc3d2;
+
+  transform: translateY(3px);
+}
+
+/* =========================
+     DARK SECONDARY
+  ========================= */
+
+[data-theme="dark"] .hero__button--secondary {
+  color: var(--foreground);
+
+  background: transparent;
+
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .hero__button--secondary:hover {
+  color: #ffb4c8;
+
+  background: rgba(255, 180, 200, 0.06);
+
+  border-color: rgba(255, 180, 200, 0.4);
+}
+
+/* =========================
+     DESKTOP
+  ========================= */
+
+@media (min-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1.4fr 0.6fr;
+
+    align-items: end;
+  }
+}
+
+/* =========================
+     MOBILE
+  ========================= */
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__grid {
+    padding: 64px 0;
+  }
+
+  .hero__title {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+}
+
+/* =========================
+     REDUCED MOTION
+  ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__button,
+  .hero__button-icon {
+    transition: none;
+  }
+}

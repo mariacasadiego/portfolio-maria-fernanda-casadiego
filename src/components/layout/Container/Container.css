@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 auto;
+
+  padding-left: clamp(24px, 5vw, 80px);
+  padding-right: clamp(24px, 5vw, 80px);
+
+  box-sizing: border-box;
+}
+
+/* =========================
+     LARGE SCREENS
+  ========================= */
+
+@media (min-width: 1600px) {
+  .container {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}
+
+/* =========================
+     TABLET
+  ========================= */
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* =========================
+     MOBILE
+  ========================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* =========================
+     SMALL MOBILE
+  ========================= */
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
