@@ -1,73 +1,128 @@
-# React + TypeScript + Vite
+# María Fernanda Casadiego — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal desarrollado para presentar mi experiencia, proyectos y recorrido como **Frontend Developer**.
 
-Currently, two official plugins are available:
+Soy desarrolladora Frontend con más de 5 años de experiencia trabajando principalmente con **React y JavaScript**, construyendo y manteniendo aplicaciones web, con foco en experiencia de usuario, performance y calidad de código.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Sobre el portfolio
 
-## React Compiler
+Este proyecto fue diseñado y desarrollado desde cero como mi espacio personal para reunir:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Mi experiencia profesional
+- Proyectos y trabajos destacados
+- Tecnologías con las que he trabajado
+- Información sobre mí
+- CV
+- Formas de contacto
 
-## Expanding the ESLint configuration
+Busqué crear una experiencia simple, cálida y visual, manteniendo una estética minimalista y una navegación clara.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologías
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+El portfolio está construido con:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React
+- TypeScript
+- Vite
+- CSS
+- Motion
+- Lucide React
+- Git & GitHub
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🎨 Características
+
+- Diseño responsive
+- Dark mode / Light mode
+- Animaciones y microinteracciones
+- Background animado
+- Navegación por secciones
+- Descarga de CV
+- Accesos directos a contacto y LinkedIn
+- Diseño adaptado para desktop, tablet y mobile
+
+## 📂 Estructura
+
+```text
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Container/
+│   │   ├── Footer/
+│   │   └── Navbar/
+│   │
+│   ├── sections/
+│   │   ├── About/
+│   │   ├── Contact/
+│   │   ├── Experience/
+│   │   ├── Hero/
+│   │   ├── Stack/
+│   │   ├── TechBar/
+│   │   └── Work/
+│   │
+│   └── ui/
+│       ├── AnimatedBackground/
+│       └── Reveal/
+│
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Ejecutar localmente
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x"
-import reactDom from "eslint-plugin-react-dom"
+Clona el repositorio:
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone URL_DEL_REPOSITORIO
 ```
+
+Entra al proyecto:
+
+```bash
+cd portfolio-maria-fernanda-casadiego
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+Inicia el entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+Para generar la versión de producción:
+
+```bash
+npm run build
+```
+
+## 🌐 Demo
+
+El portfolio se encuentra disponible en:
+
+**Próximamente**
+
+
+## 👩🏻‍💻 Sobre mí
+
+Soy **María Fernanda Casadiego**, Frontend Developer radicada en Buenos Aires, Argentina.
+
+A lo largo de mi experiencia profesional he trabajado en diferentes productos y aplicaciones web, especialmente dentro del ecosistema de **React y JavaScript**.
+
+Me gusta transformar ideas y necesidades en experiencias digitales claras, funcionales y fáciles de usar. También disfruto aprender, enfrentar nuevos desafíos y trabajar en equipo para construir mejores productos.
+
+## 📬 Contacto
+
+**María Fernanda Casadiego**  
+Frontend Developer  
+Villa Crespo, CABA — Buenos Aires, Argentina
+
+- Email: marifercasadiego@gmail.com
+- LinkedIn: https://www.linkedin.com/in/maria-fernanda-casadiego-1490591b2/
+
+---
+
+Hecho con ☕, código y mucha curiosidad.
