@@ -103,8 +103,7 @@ npm run build
 
 El portfolio se encuentra disponible en:
 
-**Próximamente**
-
+https://portfolio-maria-fernanda-casadiego.vercel.app/
 
 ## 👩🏻‍💻 Sobre mí
 
